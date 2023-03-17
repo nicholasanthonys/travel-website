@@ -64,7 +64,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Unit Testing in Docker
-        run: docker run --rm ghcr.io/nicholasanthonys/travel-website:"$GITHUB_RUN_ID" echo "npm run test"
+        run: docker run --rm ghcr.io/nicholasanthonys/travel-website:"$GITHUB_RUN_ID" npm run test
 
 
 # NEXT JOB #######################################################################   
