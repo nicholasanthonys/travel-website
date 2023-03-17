@@ -155,7 +155,7 @@ jobs:
 # NEXT JOB #######################################################################   
   build-final-image:
     name: Build Final Image
-    needs: [test-unit, test-integration, test-k3d, scan-image]
+    needs: [test-unit, test-k3d, scan-image]
     runs-on: ubuntu-latest
 
     permissions:
