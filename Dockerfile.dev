@@ -11,8 +11,8 @@ WORKDIR /app
 # Copy dependency definitions
 COPY package.json package-lock.json/app/
 
-# Install dependencies using npm, https://stackoverflow.com/questions/63187000/what-is-the-npm-equivalent-of-yarn-install-frozen-lockfile
-RUN npm ci
+# Install dependencies using npm 
+RUN npm Install
 
 # Get all the code needed to run the ap
 COPY . /app/
