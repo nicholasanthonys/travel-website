@@ -111,7 +111,7 @@ jobs:
           export TESTING_IMAGE=ghcr.io/nicholasanthonys/travel-website:"$GITHUB_RUN_ID"
           envsubst < manifests/deployment.yaml  | kubectl apply -f -
           kubectl rollout status deployment myapp
-          kubectl exec deploy/myapp -- curl --fail localhost
+          kubectl exec deploy/myapp -- curl --fail localhost:3000
 
 # NEXT JOB #######################################################################   
   scan-image:
