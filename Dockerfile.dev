@@ -9,7 +9,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # Copy dependency definitions
-COPY package.json package-lock.json/app/
+COPY package.json package-lock.json /app/
 
 # Install dependencies using npm 
 RUN npm install
