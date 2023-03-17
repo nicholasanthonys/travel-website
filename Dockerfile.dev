@@ -11,6 +11,7 @@ WORKDIR /app
 # Copy dependency definitions
 COPY package.json package-lock.json /app/
 
+RUN apk add curl
 # Install dependencies using npm 
 RUN npm install
 
