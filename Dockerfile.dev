@@ -9,10 +9,10 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # Copy dependency definitions
-COPY package.json yarn.lock /app/
+COPY package.json package-lock.json/app/
 
-# Install dependencies using npm
-RUN yarn install --frozen-lockfile
+# Install dependencies using npm, https://stackoverflow.com/questions/63187000/what-is-the-npm-equivalent-of-yarn-install-frozen-lockfile
+RUN npm ci
 
 # Get all the code needed to run the ap
 COPY . /app/
@@ -20,4 +20,4 @@ COPY . /app/
 EXPOSE 80
 
 # Run webpack dev server
-CMD yarn run start --env server.port=80
+CMD npm run start
